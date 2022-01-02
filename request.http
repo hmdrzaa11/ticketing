@@ -1,0 +1,69 @@
+### GET CURRENT USER
+GET https://ticketing.dev/api/users/currentuser
+
+
+### SIGNUP
+POST https://ticketing.dev/api/users/signup
+Content-Type: application/json
+
+{
+    "email":"wolf@gmail.com",
+    "password":"test1234"
+}
+
+
+
+### SIGNIN
+POST https://ticketing.dev/api/users/signin
+Content-Type: application/json
+
+{
+    "email":"wolf@gmail.com",
+    "password":"test1234"
+}
+
+
+
+### CURRENT USER
+GET https://ticketing.dev/api/users/currentuser
+
+
+
+### CREATE A TICKET
+POST https://ticketing.dev/api/tickets
+Content-Type: application/json
+
+{
+    "title":"wolf concert",
+    "price":200
+}
+
+
+#### UPDATE TICKET
+PUT https://ticketing.dev/api/tickets/61ce2793e0063b32c613a4d2
+Content-Type: application/json
+
+{
+    "title":"Eminem Concert",
+    "price":250
+}
+
+
+### CREATE AN ORDER
+
+POST https://ticketing.dev/api/orders
+Content-Type: application/json
+
+{
+    "ticketId":"61cf2377bae0671680eecebd"
+}
+
+
+### CREATE A CHARGE
+POST https://ticketing.dev/api/payments
+Content-Type: application/json
+
+{
+    "orderId":"61cf2391cd5deb77618aadd8",
+    "token":"tok_visa"
+}
